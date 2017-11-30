@@ -102,3 +102,4 @@ ENV/
 
 # my stuff
 data/
+!data/.gitkeep
