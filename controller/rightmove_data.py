@@ -160,7 +160,7 @@ class rightmove_data():
 			rightmove_id = df_rightmove['rightmove_id'][i]
 			
 			if show_progress:
-				info = ('i: {}, rightmove_id: {}'.format(i, rightmove_id))
+				info = ('i: {} of {}'.format(i, num_houses))
 				self._print_info_in_forloop_every_n_batch(i, batch_size=50, info=info)
 				
 			try:
@@ -199,6 +199,8 @@ class rightmove_data():
 			info = ('page number: {}, number of properties: {}'.format(i, len(df_sub)))
 			if show_progress:
 				self._print_info_in_forloop_every_n_batch(i, batch_size=5, info=info)
+
+		print('Number of properties found: {}'.format(len(df_rightmove)))
 			
 		return df_rightmove
 
